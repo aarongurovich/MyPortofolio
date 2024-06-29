@@ -1,0 +1,35 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    background: #f0f0f0;
+}
+
+#cursor-follow {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+footer {
+    position: fixed;
+    bottom: 50px; /* Adjusted to ensure footer isn't too close to the bottom edge */
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    padding: 20px 0; /* Increased padding for better visual spacing */
+}
+
+.social-links a {
+    margin: 0 50px; /* Increased margin for better spacing between icons */
+    width: auto; /* Changed to auto to allow more flexible spacing based on icon size */
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle; /* Aligns text and icons vertically */
+}
+
+.social-links i {
+    margin-right: 10px; /* Slightly larger margin for better separation */
+    color: #fcfcfc; /* Adjusted color for visibility */
+    font-size: 50px; /* Significantly increased font size for icons */
+}
