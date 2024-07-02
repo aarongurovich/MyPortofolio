@@ -34,6 +34,19 @@ footer {
     font-size: 50px; 
 }
 
+.social-links i {
+    margin-right: 10px;
+    color: #fcfcfc;
+    font-size: 50px;
+    transition: transform 0.3s ease, color 0.3s ease;  
+}
+
+.social-links i:hover {
+    transform: scale(1.2); 
+    cursor: pointer;  
+}
+
+
 @media (max-width: 768px) {
     body, html {
         overflow: auto; 
