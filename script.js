@@ -4,13 +4,11 @@ const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('cursor-follow').appendChild(renderer.domElement);
 
-
 const ambientLight = new THREE.AmbientLight(0x404040);
 const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
 directionalLight.position.set(0, 1, 0);
 scene.add(ambientLight);
 scene.add(directionalLight);
-
 
 const transitionMaterial = new THREE.ShaderMaterial({
     uniforms: {
@@ -42,11 +40,10 @@ scene.add(cube);
 
 camera.position.z = 5;
 
-const clock = new THREE.Clock();
+let hoveredIcon = null;
 
 function animate() {
     requestAnimationFrame(animate);
-    
     transitionMaterial.uniforms.transitionProgress.value += 0.01;
     if (transitionMaterial.uniforms.transitionProgress.value >= 1.0) {
         transitionMaterial.uniforms.transitionProgress.value = 0.0;
@@ -56,6 +53,7 @@ function animate() {
     cube.rotation.x += 0.01;
     cube.rotation.y += 0.01;
     renderer.render(scene, camera);
+
 }
 
 animate();
@@ -64,4 +62,3 @@ document.addEventListener('mousemove', event => {
     cube.position.x = (event.clientX / window.innerWidth) * 2 - 1;
     cube.position.y = -(event.clientY / window.innerHeight) * 2 + 1;
 });
-

@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap');
+
 body, html {
     height: 100%;
     margin: 0;
     overflow: hidden;
-    background: #f0f0f0;
+    background: black;
 }
 
 #cursor-follow {
@@ -28,18 +30,43 @@ footer {
     vertical-align: middle;
 }
 
-.social-links i {
-    margin-right: 10px;
-    color: #fcfcfc; 
-    font-size: 50px; 
-}
 
 .social-links i {
     margin-right: 10px;
     color: #fcfcfc;
-    font-size: 50px;
+    font-size: 65px;
     transition: transform 0.3s ease, color 0.3s ease;  
 }
+
+
+#container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#name {
+    font-family: 'Sniglet'; 
+    font-size: 3em;
+    font-weight: bold;
+    position: absolute;
+    top: 100px; 
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff; 
+    z-index: 10; 
+}
+
+
+#cursor-follow {
+    width: 100%;
+    height: 100%;
+}
+
+
 
 .social-links i:hover {
     transform: scale(1.2); 
@@ -67,6 +94,6 @@ footer {
     }
 
     .social-links i {
-        font-size: 25px; 
+        font-size: 40px; 
     }
 }
