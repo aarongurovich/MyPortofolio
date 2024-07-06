@@ -74,10 +74,11 @@ footer {
 }
 
 
+
 @media (max-width: 768px) {
     body, html {
         overflow: auto; 
-        font-size: 14px; 
+        font-size: 14   px; 
     }
 
     #cursor-follow {
