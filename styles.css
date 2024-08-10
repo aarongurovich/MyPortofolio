@@ -7,11 +7,13 @@ body, html {
     background: black;
 }
 
+
 #cursor-follow {
     width: 100%;
     height: 100%;
     position: relative;
 }
+
 
 footer {
     position: fixed;
@@ -48,6 +50,7 @@ footer {
     align-items: center;
 }
 
+
 #name {
     font-family: 'Sniglet'; 
     font-size: 3em;
@@ -58,12 +61,6 @@ footer {
     transform: translateX(-50%);
     color: #ffffff; 
     z-index: 10; 
-}
-
-
-#cursor-follow {
-    width: 100%;
-    height: 100%;
 }
 
 

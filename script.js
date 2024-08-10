@@ -50,15 +50,44 @@ function animate() {
         transitionMaterial.uniforms.currentColor.value = transitionMaterial.uniforms.targetColor.value;
         transitionMaterial.uniforms.targetColor.value = new THREE.Color(Math.random(), Math.random(), Math.random()).toArray();
     }
-    cube.rotation.x += 0.003;
-    cube.rotation.y += 0.003;
+    cube.rotation.x += 0.004;
+    cube.rotation.y += 0.004;
     renderer.render(scene, camera);
-
 }
 
 animate();
 
 document.addEventListener('mousemove', event => {
-    cube.position.x = (event.clientX / window.innerWidth) * 2 - 1;
-    cube.position.y = -(event.clientY / window.innerHeight) * 2 + 1;
+    const mouse = new THREE.Vector2(
+        (event.clientX / window.innerWidth) * 2 - 1,
+        -(event.clientY / window.innerHeight) * 2 + 1
+    );
+
+    const raycaster = new THREE.Raycaster();
+    raycaster.setFromCamera(mouse, camera);
+    const intersects = raycaster.intersectObject(cube);
+
+    if (intersects.length > 0) {
+        document.body.style.cursor = 'pointer';
+    } else {
+        document.body.style.cursor = 'default';
+    }
+
+    cube.position.x = mouse.x;
+    cube.position.y = mouse.y;
+});
+
+document.addEventListener('click', event => {
+    const mouse = new THREE.Vector2(
+        (event.clientX / window.innerWidth) * 2 - 1,
+        -(event.clientY / window.innerHeight) * 2 + 1
+    );
+
+    const raycaster = new THREE.Raycaster();
+    raycaster.setFromCamera(mouse, camera);
+    const intersects = raycaster.intersectObject(cube);
+
+    if (intersects.length > 0) {
+        window.open('https://project-portfolio-co4.pages.dev/', '_blank');
+    }
 });
