@@ -50,8 +50,8 @@ function animate() {
         transitionMaterial.uniforms.currentColor.value = transitionMaterial.uniforms.targetColor.value;
         transitionMaterial.uniforms.targetColor.value = new THREE.Color(Math.random(), Math.random(), Math.random()).toArray();
     }
-    cube.rotation.x += 0.004;
-    cube.rotation.y += 0.004;
+    cube.rotation.x += 0.003;
+    cube.rotation.y += 0.003;
     renderer.render(scene, camera);
 
 }
