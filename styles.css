@@ -40,7 +40,6 @@ footer {
     transition: transform 0.3s ease, color 0.3s ease;  
 }
 
-
 #container {
     position: relative;
     width: 100%;
@@ -63,7 +62,17 @@ footer {
     z-index: 10; 
 }
 
-
+#info{
+    font-family: 'Sniglet'; 
+    font-size: 2em;
+    font-weight: bold;
+    position: absolute;
+    top: 170px; 
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff; 
+    z-index: 10; 
+}
 
 .social-links i:hover {
     transform: scale(1.2); 
