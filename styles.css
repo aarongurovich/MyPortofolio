@@ -91,6 +91,10 @@ footer {
         height: auto; 
     }
 
+    #info{
+        display: none;
+    }
+
     footer {
         bottom: 0px;
         padding: 15px 0; 
