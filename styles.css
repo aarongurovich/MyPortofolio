@@ -74,6 +74,10 @@ footer {
     z-index: 10; 
 }
 
+#info-mobile{
+    display: none;
+}
+
 .social-links i:hover {
     transform: scale(1.2); 
     cursor: pointer;  
@@ -93,6 +97,19 @@ footer {
 
     #info{
         display: none;
+    }
+
+    #info-mobile{
+        font-family: 'Sniglet'; 
+        font-size: 1.5em;
+        font-weight: bold;
+        position: absolute;
+        top: 230px; 
+        left: 50%;
+        transform: translateX(-50%);
+        color: #ffffff; 
+        z-index: 10; 
+        display: block;
     }
 
     footer {
