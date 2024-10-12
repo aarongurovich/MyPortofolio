@@ -40,6 +40,20 @@ scene.add(cube);
 
 camera.position.z = 5;
 
+
+let isWindows = false;
+
+if (navigator.userAgentData) {
+    
+    isWindows = navigator.userAgentData.platform === 'Windows';
+} else if (navigator.userAgent) {
+   
+    isWindows = navigator.userAgent.includes('Windows');
+}
+
+
+let rotationSpeed = isWindows ? 0.06 : 0.012;
+
 let hoveredIcon = null;
 
 function animate() {
@@ -50,8 +64,8 @@ function animate() {
         transitionMaterial.uniforms.currentColor.value = transitionMaterial.uniforms.targetColor.value;
         transitionMaterial.uniforms.targetColor.value = new THREE.Color(Math.random(), Math.random(), Math.random()).toArray();
     }
-    cube.rotation.x += 0.012;
-    cube.rotation.y += 0.012;
+    cube.rotation.x += rotationSpeed;
+    cube.rotation.y += rotationSpeed;
     renderer.render(scene, camera);
 }
 
