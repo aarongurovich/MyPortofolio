@@ -52,8 +52,7 @@ if (navigator.userAgentData) {
 }
 
 
-let rotationSpeed = isWindows ? 0.06 : 0.012;
-
+let rotationSpeed = isWindows ? 0.004 : 0.012;
 let hoveredIcon = null;
 
 function animate() {
