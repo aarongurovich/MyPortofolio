@@ -80,27 +80,7 @@ document.addEventListener('mousemove', event => {
     raycaster.setFromCamera(mouse, camera);
     const intersects = raycaster.intersectObject(cube);
 
-    if (intersects.length > 0) {
-        document.body.style.cursor = 'pointer';
-    } else {
-        document.body.style.cursor = 'default';
-    }
-
     cube.position.x = mouse.x;
     cube.position.y = mouse.y;
 });
 
-document.addEventListener('click', event => {
-    const mouse = new THREE.Vector2(
-        (event.clientX / window.innerWidth) * 2 - 1,
-        -(event.clientY / window.innerHeight) * 2 + 1
-    );
-
-    const raycaster = new THREE.Raycaster();
-    raycaster.setFromCamera(mouse, camera);
-    const intersects = raycaster.intersectObject(cube);
-
-    if (intersects.length > 0) {
-        window.open('https://project-portfolio-co4.pages.dev/', '_blank');
-    }
-});
